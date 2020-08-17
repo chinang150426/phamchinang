@@ -1,0 +1,47 @@
+@charset "utf-8";
+/* CSS Document */
+#menu_tab{
+	width: 1000px;
+	height: 60px;
+}
+ul.menu{
+	width: 1000px;
+	float: left;
+	display:block;
+	list-style-type: none;
+	background: url("../images/20190829_063025_837306_2-1491362179498.max-800x800.jpg");
+	background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+ul.menu li{
+	display:inline;
+	font-size:11px;
+	font-weight:bold;
+	line-height: 60px;
+
+}
+ul.menu li.divider{
+	display:inline;
+	width:2px;
+	height:50px;
+	float:left;
+	border-right:1px dotted #000;
+}
+ul.menu li a, ul.menu li a:visited{
+	display:block;
+	float: left;
+	padding:0 8px 0 22px;
+	margin: 0 14px;
+	height: 50px;
+	text-decoration:none;
+	color:#67d77;
+}
+li.currencies{
+	width: 180px;
+	float: left;
+	padding:0 0 0 15px;
+	color:#67d77;
+	font-size: 11px;
+	font-weight:bold;
+}

@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* CSS Document */
+
+.center_content{
+	width:804px;
+	height: 750px;
+	float:left;
+	background: #D8AFB0;
+	margin: 5px 0 0 0;
+	
+}
+.chen{
+	margin: 5px 0 0 0;
+}
+.cach_left{
+	width:  789px;
+	height: 750px;
+	float: left;
+	margin: auto;
+	margin-left:  15px;
+}

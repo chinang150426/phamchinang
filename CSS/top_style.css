@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+.clr{
+	clear: both;	
+}
+body{
+	background: url("../images/hinh-nen-dep-mau-trang_104324637.jpg") center top no-repeat;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 13;
+	
+}
+.main{
+	width: 1000px;
+	margin: 0px auto;
+}
+.top{
+	align-items: center;
+	width: 1000px;
+	height: 45px;
+	background-color: cadetblue;
+}
+.right{
+	float: right;
+	padding-top: 8px;
+}

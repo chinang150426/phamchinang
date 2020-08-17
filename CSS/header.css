@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+.header{
+	width: 1000px;
+	height: 180px;
+	background: url("../images/photo1536832324500-15368323245011107987639.jpg");
+	background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+}
+#logo{
+	float: left;
+	padding: 20px;
+}
+.slider{
+	width:600px;
+	height:164px;
+	padding:0 0 0 50px;
+}
