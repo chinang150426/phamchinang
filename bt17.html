@@ -65,33 +65,54 @@
 		<!-- Center-->
 		<div class="center_content">
 			<div class="chen">
-				<table class="cach_left" border="1">
-					<caption><b> Thể thao cuối tuần </b> </caption>
-					<tr>
-						<th bgcolor="efefef"></th>
-						<th bgcolor="efefef">Buổi sáng</th>
-						<th bgcolor="efefef">Buổi chiều</th>
-					</tr>
-					<tr>
-						<th bgcolor="efefef">Thứ 7</th>
-						<th bgcolor="efefef">Đạp xe</th>
-						<th bgcolor="efefef">Buổi chiều</th>
-					</tr>
-					<tr>
-						<th bgcolor="efefef">Chủ nhật</th>
-						<th bgcolor="efefef">Đua thuyền</th>
-						<th bgcolor="efefef">
-							<table>
-								<tr>
-									<th bgcolor="cyan">Nhóm 1</th>
-									<th bgcolor="yellow">Nhóm 2</th>
-								</tr>
-								<th bgcolor="lightblue">3 người</th>
-								<th bgcolor="lightblue">5 người</th>
-							</table>
-						</th>
-					</tr>
-				</table>
+				<div class="cach_left">
+					<form>
+					  <table width="602" height="425" border="1">
+							<tr>
+								<td width="109" height="47"> Họ tên: </td>
+							  <td width="375"><input type="text" name="hoten" size="20" maxlength="20" placeholder="Nhập họ tên ở đây" /></td>
+							</tr>
+							<tr>
+								<td width="109" height="54"> Giới tính </td>
+								<td><input type="radio" name="gioitinh"  checked/>
+									Nam
+										<input type="radio" name="gioitinh"/>
+									Nữ
+								</td>                
+							</tr>
+							<tr>
+								<td width="109" height="49"> Điều bạn quan tâm </td>
+								<td> 
+									<input type="checkbox" name="quantam" checked/>
+										Kinh tế
+									<input type="checkbox" name="quantam" checked/>
+										Xã hội
+									<input type="checkbox" name="quantam" checked/>
+										Giải trí               
+								</td> 
+							</tr>
+							<tr>
+								<td height="106">Địa chỉ:</td>
+							  <td><textarea name="diachi" cols="60" rows="5">
+								</textarea></td>
+							</tr>
+							<tr>
+								<td> Học vấn: </td>
+								<td> <select name="hocvan">
+									<option value="daihoc"> Đại Học</option>
+									<option value="caodang"> Cao Đẳng</option>
+									<option value="trungcap"> Trung Cấp</option>
+									<option value="thpt"> THPT</option>
+								</td>
+							</tr>
+							<td height="5"><tr>
+								<td colspan="2"><input name="submit" type="submit" value="Gửi thông tin" />
+								<input name="reset" type="reset" value="Nhập lại"/>
+								</td>
+							<td height="20"></tr>
+						</table>
+				  </form>
+				</div>
 			</div>
 		</div>
 </body>
