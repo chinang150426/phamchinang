@@ -1,0 +1,63 @@
+@charset "utf-8";
+/* CSS Document */
+<style>
+body{
+	color: #000000;
+	background-color: #ffffff;
+	font-family: aria, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif"sans-serif;
+	font-size: 12px;
+}
+h1{color: blue;}
+p.one{
+	font-family: "Hoefler Text", "Liberation Serif", "Times New Roman", "serif";
+	background-color: yellow;
+}
+p.two{
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	background-color: gray;
+}
+p.three{
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
+	font-weight: 900;
+	font-size: 20px;
+}
+p.none{text-tranform: none;}
+p.capitalize{
+	text-transform: capitalize;
+	text-align: center;
+}
+p.uppercase{
+	text-transform: uppercase;
+	text-align: right;
+}
+p.lowercase{
+	text-transform: lowercase;
+	text-align: left;
+}
+p.pageOne: first-letter{
+	font-size: 42px;
+	width: 200px;
+}
+p.pageOne: first-line{
+	font-weight: bold;
+}
+.shadow{
+	text-shadow: #999999 10px 10px 3px;
+}
+p {padding: 10px;}
+p[id] {border:1px solid #000000;}
+p[id="summary"] {background-color: #ffff00;}
+p[class~="XHTML"] {border:5px solid #000000;}
+p[language|="en"] {
+	color:rgb(255,255,255);
+	background-color: rgb(0,0,0);
+}
+p[class^="b"] {
+	border:3px solid #333333;
+	color:#ff00ff;
+}
+p[class$="x"] {
+	border:1px solid #333333;
+	color:#ff0000;
+}
+p[class*="in"] {background-color: #00ffff;}
