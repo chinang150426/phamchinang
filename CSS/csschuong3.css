@@ -44,6 +44,8 @@ p.pageOne: first-line{
 .shadow{
 	text-shadow: #999999 10px 10px 3px;
 }
+
+
 p {padding: 10px;}
 p[id] {border:1px solid #000000;}
 p[id="summary"] {background-color: #ffff00;}
@@ -61,3 +63,39 @@ p[class$="x"] {
 	color:#ff0000;
 }
 p[class*="in"] {background-color: #00ffff;}
+
+		a:link{
+			text-decoration: none;
+			color: green;
+		}
+		a:visited{
+			text-decoration: none;
+			color: blue;
+		}
+		a:hover{
+			text-decoration: underline;
+			color: red;
+		}
+		a:active{
+			text-decoration: underline;
+			color: yellow;
+		}
+
+
+h1,p,b{
+	border: 1px solid black ;
+}
+img{
+	border: 2px solid grey;
+}
+h1,b{
+	background-color: darkgray;
+}
+p.one{
+	border-style: dashed;
+	border-color: blue;
+}
+#A{
+	border-style: dotted;
+	border-color: red;
+}
