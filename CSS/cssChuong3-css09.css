@@ -1,0 +1,30 @@
+
+a {
+    padding: 0px 20px;
+   color: red;
+}
+div.menu {
+	
+    background-color: turquoise;
+    width: 100%;
+    height:50px;
+    line-height: 50px;
+    }
+h1 {
+	color: blue;
+}
+p.one {
+	height: 3px;
+	background-color: aqua;
+}
+img {
+	float:right;
+	width: 20%;
+	padding-right: 450px;
+	padding-left: 6px;
+	padding-top: 10px;
+	
+}
+body {
+	font-family: Constantia, Lucida Bright, DejaVu Serif, Georgia, serif;
+}
