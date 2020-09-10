@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<link href="images/logo-Title-removebg-preview.png" rel="shortcut icon" />
+	<link rel="stylesheet" type="text/css" href="CSS/top_style.css"/>
+	<link rel="stylesheet" type="text/css" href="CSS/header.css"/>
+	<link rel="stylesheet" type="text/css" href="CSS/menu.css"/>
+	<link rel="stylesheet" type="text/css" href="CSS/left.css"/>
+	<link rel="stylesheet" type="text/css" href="CSS/center.css"/>
+<title> Phạm Chí Năng</title>
+</head>
+<style>
+	table{
+		width:50%;
+	}
+	table, td, caption{
+		border:1px solid;
+	}
+	caption{
+		color:#00C;
+	}
+	td, caption{
+		background:#159CB1;
+	}
+</style>
+	
+<body>
+	<div class="main">
+		<div class="top">
+			<img src="http://banners.wunderground.com/banner/gizmotimetemp_both/language/www/global/stations/48900.gif"alt="Du bao thoi tiet - Thanh pho Ho Chi Minh" title="Dự báo thời tiết - Thành phố Hồ Chí Minh" height="41" width="152"/>
+			<div class="right">
+				<img src="images/PhamChiNang__1_-removebg-preview.png" width="165" height="40"/>
+			</div>
+			<div class="right">
+				<img src="images/PhamChiNang-removebg-preview.png" width="165" height="40"/>
+			</div>
+		</div>
+		<div class="header">
+			<div class="logo" align="center"><img src="images/was-removebg-preview.png" width="678" height="162" alt="Ứng dụng Web" title="Ứng dụng web_Cô Mai Trang"/></div>
+			<div class="clr"></div>
+			<div class="clr"></div>
+			<div class="content"></div>
+			<div id="menu_tab">
+                <ul class="menu">
+                	<li><a href="index.html" >Trang Chủ</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#" >Học HTML</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#" >Học CSS</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Học JQuery</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Tài Liệu</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Bài Tập</a></li>
+					<li class="divider"></li>
+                    <li><a href="#">Bài Tập bắt buộc</a></li>
+					<li class="divider"></li>
+                </ul>
+            </div>
+		</div>
+		
+		<!-- Left-->
+		<div class="left_content">
+		  <div class="title_box"> Bài Tập</div>
+			<ul class="left_menu">
+				<li class="odd"><a href="#">Bài tập chương 1</a></li>
+				<li class="even"><a href="BTChuong2.html">Bài tập chương 2</a></li>
+				<li class="odd"><a href="BTChuong3.html">Bài tập chương 3</a></li>
+				<li class="even"><a href="BTChuong4.html">Bài tập chương 4</a></li>
+				<li class="odd"><a href="BTChuong5.html">Bài tập chương 5</a></li>
+			</ul>
+
+			
+		</div>
+		<!-- Center-->
+		<div class="center_content">
+			<div class="chen">
+				<form id="reg" onSubmit="return Dangky()">
+					<table>
+					<caption><strong>ĐĂNG KÝ MUA HÀNG</strong></caption>
+
+					<tr>
+						<td>Họ</td>
+						<td><input type="text" name="txtHo" required></td>
+					</tr>
+					<tr>
+						<td>Tên</td>
+						<td><input type="text" name="txtTen" required></td>
+					</tr>
+					<tr>
+						<td>Email</td>
+						<td><input type="email" name="txtEmail" required></td>
+					</tr>
+					<tr>
+						<td>Số Điện Thoại</td>
+						<td><input type="text" name="txtNum" required></td>
+					</tr>
+					<tr>
+						<td>Số Lượng</td>
+						<td><input type="number" name="txtSoluong" required></td>
+					</tr>
+					<tr>
+						<td>Ngày Nhận Hàng</td>
+						<td><input type="date" name="txtNgaysinh"></td>
+					</tr>
+					<tr>
+						<td>Thanh Toán</td>
+						<td>
+						<input type="radio" name="thanhtoan" value="Chuyển Khoản" required>Chuyển Khoản
+						<input type="radio" name="thanhtoan" value="Trực tiếp khi giao hàng" required>Trực tiếp khi giao hàng
+						</td>
+					</tr>
+					<tr>
+						<td><input type="submit" value="Đăng Ký Mua" required></td>        <td><input type="reset" value="Xoá"></td>
+					</tr>
+					</table> 
+				</form>											
+			</div>
+		</div>
+</body>
+</html>
