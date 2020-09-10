@@ -10,6 +10,17 @@
 	<link rel="stylesheet" type="text/css" href="CSS/center.css"/>
 <title> Phạm Chí Năng</title>
 </head>
+	<script>
+		function tinhTuoi()
+		{
+			var ten = document.getElementById("name").value;
+			var namSinh = Number(document.getElementById("year").value);
+			var d = new Date();
+			var namHienTai = d.getFullYear();
+			var tuoi = namHienTai - namSinh ;
+			document.getElementById("kq").innerHTML = "Chào bạn " + ten + "<br>Tuổi của bạn là : " + tuoi;
+			}
+</script>
 
 <body>
 	<div class="main">
@@ -56,9 +67,6 @@
 				<li class="odd"><a href="BTChuong3.html">Bài tập chương 3</a></li>
 				<li class="even"><a href="BTChuong4.html">Bài tập chương 4</a></li>
 				<li class="odd"><a href="BTChuong5.html">Bài tập chương 5</a></li>
-				<li class="even"><a href="BTChuong6.html">Bài tập chương 6</a></li>
-				<li class="odd"><a href="BTChuong7.html">Bài tập chương 7</a></li>
-				<li class="even"><a href="BTChuong8.html">Bài tập chương 8</a></li>
 			</ul>
 
 			
@@ -66,7 +74,20 @@
 		<!-- Center-->
 		<div class="center_content">
 			<div class="chen">
-				<img src="images/unnamed-removebg-preview.png" width="367" height="243"/>
+				<h1>Chương trình tính tuổi</h1>
+					<table border="1">
+						<tr>
+							<td>Nhập tên của bạn</td>
+							<td><input type="text" id="name" placeholder="Nhập tên"/></td>
+						</tr>
+						<tr>
+							<td>Nhập vào năm sinh</td>
+							<td><input type="text" id="year"
+							 placeholder="Nhập tuổi">
+						</tr>
+					</table>
+				<button onClick="tinhTuoi()">Tính tuổi</button>
+				<p id="kq"></p>				
 			</div>
 		</div>
 </body>

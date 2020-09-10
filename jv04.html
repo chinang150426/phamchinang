@@ -10,7 +10,25 @@
 	<link rel="stylesheet" type="text/css" href="CSS/center.css"/>
 <title> Phạm Chí Năng</title>
 </head>
-
+<style>
+	P{
+		text-align: center;
+		font-size: 5em;
+		font-weight: 700;
+		color: RGB(125,123,124);
+	}	
+</style>
+<script>
+		function Xoay(){
+			var str1 = document.getElementById("left").innerHTML;
+			str1 = str1.substr(1) + str1.substr(0,1);
+			document.getElementById("left").innerHTML =str1;
+			var str2 = document.getElementById("right").innerHTML;
+			str2 = str2.substr(str2.length - 1) + str2.substr(0,str2.length-1)
+			document.getElementById("right").innerHTML =str2;
+		}
+	setInterval(Xoay, 500);
+	</script>
 <body>
 	<div class="main">
 		<div class="top">
@@ -56,9 +74,6 @@
 				<li class="odd"><a href="BTChuong3.html">Bài tập chương 3</a></li>
 				<li class="even"><a href="BTChuong4.html">Bài tập chương 4</a></li>
 				<li class="odd"><a href="BTChuong5.html">Bài tập chương 5</a></li>
-				<li class="even"><a href="BTChuong6.html">Bài tập chương 6</a></li>
-				<li class="odd"><a href="BTChuong7.html">Bài tập chương 7</a></li>
-				<li class="even"><a href="BTChuong8.html">Bài tập chương 8</a></li>
 			</ul>
 
 			
@@ -66,7 +81,9 @@
 		<!-- Center-->
 		<div class="center_content">
 			<div class="chen">
-				<img src="images/unnamed-removebg-preview.png" width="367" height="243"/>
+				<p id="left">   PHAM CHI NANG  </p>
+				<hr width="5">
+				<p id="right">   HTML-JAVASCRIPT   </p>								
 			</div>
 		</div>
 </body>

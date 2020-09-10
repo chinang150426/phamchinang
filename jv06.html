@@ -10,7 +10,20 @@
 	<link rel="stylesheet" type="text/css" href="CSS/center.css"/>
 <title> Phạm Chí Năng</title>
 </head>
-
+<script>
+	function dangKi(){
+	var ten = document.forms.reg["txtTen"].value;
+	var pass = document.forms.reg["txtPass"].value;
+	var gt = document.forms.reg["gt"].value;
+	var NS = document.forms.reg["txtNS"].value;
+	var vd =document.forms.reg["qt"].value;
+	document.forms.reg["thongtin"].value = "Chào mừng " + ten + " đã đến với channel của mình\n" + "Bạn là " + gt 
+	+ "\nMật khẩu của bạn có " + pass.length + " kí tự\n" + "Bạn sinh ngày " + NS/*.getDay()+"/"+NS.getMonth+"/"+NS.getFullYear*/+"\nVấn đề bạn quan tâm là " +vd;
+		return false;	
+	}
+	
+</script>
+	
 <body>
 	<div class="main">
 		<div class="top">
@@ -56,9 +69,6 @@
 				<li class="odd"><a href="BTChuong3.html">Bài tập chương 3</a></li>
 				<li class="even"><a href="BTChuong4.html">Bài tập chương 4</a></li>
 				<li class="odd"><a href="BTChuong5.html">Bài tập chương 5</a></li>
-				<li class="even"><a href="BTChuong6.html">Bài tập chương 6</a></li>
-				<li class="odd"><a href="BTChuong7.html">Bài tập chương 7</a></li>
-				<li class="even"><a href="BTChuong8.html">Bài tập chương 8</a></li>
 			</ul>
 
 			
@@ -66,7 +76,54 @@
 		<!-- Center-->
 		<div class="center_content">
 			<div class="chen">
-				<img src="images/unnamed-removebg-preview.png" width="367" height="243"/>
+				<form id="reg" onSubmit="return dangKi()">
+						<table border="1">
+							<tr colspan="2" align="center"><h1>ĐĂNG KÍ THÀNH VIÊN</h1></tr>
+
+							<tr>
+								<td width="30%">Tên đăng nhập</td>
+								<td> <input type="text" name="txtTen" required></td>
+							</tr>
+							<tr>
+								<td >Mật khẩu</td>
+								<td> <input type="password" name="txtPass"></td>
+							</tr>
+							<tr>
+								<td >Ngày sinh</td>
+								<td> <input type="date" name="txtNS"></td>
+							</tr>
+							<tr>
+								<td>Giới tính</td>
+								<td>
+									<p>
+										<input type="radio" name="gt" value="Nam" checked>Nam
+										<input type="radio" name="gt" value="Nữ">Nữ
+
+									</p>
+									</td>
+							</tr>
+							<tr>
+								<td>Vấn đề bạn quan tâm</td>
+								<td>
+									<select name="qt">
+										<option value="Kinh tế">Kinh tế</option>
+										<option value="Thể thao">Thể thao</option>
+										<option value="Văn học nghệ thuật">Văn học nghệ thuật</option>
+									</select>
+
+								</td>
+								<tr>
+										<td><input type="submit" value="Đăng kí"></td>
+										<td><input type="reset" value="Hủy"></td>
+								</tr>
+								<tr>
+								<td colspan="2">
+									<textarea name="thongtin" rows="6" cols="50"></textarea>
+								</td>
+								</tr>
+							</tr>
+						</table>
+				</form>							
 			</div>
 		</div>
 </body>

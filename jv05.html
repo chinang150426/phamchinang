@@ -10,7 +10,18 @@
 	<link rel="stylesheet" type="text/css" href="CSS/center.css"/>
 <title> Phạm Chí Năng</title>
 </head>
-
+<style>
+	table{
+		width: 100%;
+	}
+	table,td{
+		border: 1px solid;
+	}
+	td{
+		padding-left: 50px;
+	}
+</style>
+	
 <body>
 	<div class="main">
 		<div class="top">
@@ -56,9 +67,6 @@
 				<li class="odd"><a href="BTChuong3.html">Bài tập chương 3</a></li>
 				<li class="even"><a href="BTChuong4.html">Bài tập chương 4</a></li>
 				<li class="odd"><a href="BTChuong5.html">Bài tập chương 5</a></li>
-				<li class="even"><a href="BTChuong6.html">Bài tập chương 6</a></li>
-				<li class="odd"><a href="BTChuong7.html">Bài tập chương 7</a></li>
-				<li class="even"><a href="BTChuong8.html">Bài tập chương 8</a></li>
 			</ul>
 
 			
@@ -66,7 +74,27 @@
 		<!-- Center-->
 		<div class="center_content">
 			<div class="chen">
-				<img src="images/unnamed-removebg-preview.png" width="367" height="243"/>
+				<h1 align="center">Bảng Cửu Chương</h1>
+				<p id="kq"></p>
+				<script>
+						var html = "<table>";
+						var row,col, i, j, step = 0;
+						for(row = 1; row <= 2; row++){
+							html += "<tr>";
+							for(col = 1; col <= 4; col++){
+								html += "<td>";
+								i = col + 1 + step;
+								for(j = 1; j<=9;j++){
+									html += i + " x " + j + " = " + i*j + "<br>";
+								}
+								html += "</td>";
+							}
+							step += 4;
+							html += "</tr>";
+						}
+						html += "</table";
+						document.getElementById("kq").innerHTML = html;
+				</script>				
 			</div>
 		</div>
 </body>

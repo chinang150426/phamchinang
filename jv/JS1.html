@@ -1,0 +1,35 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS1</title>
+</head>
+<script>
+function tinhTuoi()
+{
+	var ten = document.getElementById("name").value;
+	var namSinh = Number(document.getElementById("year").value);
+	var d = new Date();
+	var namHienTai = d.getFullYear();
+	var tuoi = namHienTai - namSinh ;
+	document.getElementById("kq").innerHTML = "Chào bạn " + ten + "<br>Tuổi của bạn là : " + tuoi;
+	}
+</script>
+<body>
+<h1>Chương trình tính tuổi</h1>
+<table border="1">
+<tr>
+<td>Nhập tên của bạn</td>
+<td><input type="text" id="name" placeholder="Nhập tên"/></td>
+</tr>
+<tr>
+<td>Nhập vào năm sinh</td>
+<td><input type="text" id="year"
+ placeholder="Nhập tuổi">
+</tr>
+</table>
+<button onClick="tinhTuoi()">Tính tuổi</button>
+<p id="kq"></p>
+</body>
+</html>

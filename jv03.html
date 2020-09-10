@@ -10,7 +10,27 @@
 	<link rel="stylesheet" type="text/css" href="CSS/center.css"/>
 <title> Phạm Chí Năng</title>
 </head>
-
+<script>
+	function tinhToan(){
+		
+		var a = parseInt(document.forms["myform"]["txtSo1"].value);
+		var b = parseInt(document.forms["myform"]["txtSo2"].value);
+		var op = document.forms["myform"]["op"].value;
+		var kq;
+		switch(op){
+			case "+": kq = a + b; break;
+			case "-": kq = a - b;break;
+			case "*": kq = a * b; break;
+			case "/":
+				if(b != 0)
+					kq = a/b;
+				elsekq = "Không thể chia cho 0";
+				break;
+		}
+		document.forms["myform"]["kq"].value = kq;
+		return false;
+	}
+</script>
 <body>
 	<div class="main">
 		<div class="top">
@@ -56,9 +76,6 @@
 				<li class="odd"><a href="BTChuong3.html">Bài tập chương 3</a></li>
 				<li class="even"><a href="BTChuong4.html">Bài tập chương 4</a></li>
 				<li class="odd"><a href="BTChuong5.html">Bài tập chương 5</a></li>
-				<li class="even"><a href="BTChuong6.html">Bài tập chương 6</a></li>
-				<li class="odd"><a href="BTChuong7.html">Bài tập chương 7</a></li>
-				<li class="even"><a href="BTChuong8.html">Bài tập chương 8</a></li>
 			</ul>
 
 			
@@ -66,7 +83,39 @@
 		<!-- Center-->
 		<div class="center_content">
 			<div class="chen">
-				<img src="images/unnamed-removebg-preview.png" width="367" height="243"/>
+<form id="myform" onSubmit="return tinhToan()">
+		<table border="1">
+			<tr colspan="2"><h2>Các phép tính số học</h2></tr>
+			<tr>
+				<td width="30%">Số thứ nhất</td>
+				<td> <input type="text" name="txtSo1"></td>
+			</tr>
+			<tr>
+				<td>Số thứ hai</td>
+				<td> <input type="text" name="txtSo2"></td>
+			</tr>
+			<tr>
+				<td>Chọn phép toán</td>
+				<td>
+					<p>
+						<input type="radio" name="op" value="+">Cộng<br>
+						<input type="radio" name="op" value="-">Trừ<br>
+						<input type="radio" name="op" value="*">Nhân<br>
+						<input type="radio" name="op" value="/">Chia<br>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="submit" name="btCong" value="Thực hiện">
+					<input type="reset" value="Hủy">
+				</td>
+				<td>
+					<input type="text" name="kq" readonly>
+				</td>
+			</tr>
+		</table>
+	</form>								
 			</div>
 		</div>
 </body>
