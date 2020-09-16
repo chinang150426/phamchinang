@@ -8,11 +8,10 @@
 	<link rel="stylesheet" type="text/css" href="CSS/menu.css"/>
 	<link rel="stylesheet" type="text/css" href="CSS/left.css"/>
 	<link rel="stylesheet" type="text/css" href="CSS/center.css"/>
-	<link rel="stylesheet" type="text/css" href="CSS/left_of_center.css"/>
 <title> Phạm Chí Năng</title>
 </head>
 
-<body>
+<body onLoad="draw()">
 	<div class="main">
 		<div class="top">
 			<img src="http://banners.wunderground.com/banner/gizmotimetemp_both/language/www/global/stations/48900.gif"alt="Du bao thoi tiet - Thanh pho Ho Chi Minh" title="Dự báo thời tiết - Thành phố Hồ Chí Minh" height="41" width="152"/>
@@ -40,9 +39,9 @@
                     <li class="divider"></li>
                     <li><a href="#">Tài Liệu</a></li>
                     <li class="divider"></li>
-                    <li><a href="#">Bài Tập</a></li>
+                    <li><a href="BaiTap.html">Bài Tập</a></li>
 					<li class="divider"></li>
-                    <li><a href="#">Bài Tập bắt buộc</a></li>
+                    <li><a href="BTBatBuoc.html">Bài Tập bắt buộc</a></li>
 					<li class="divider"></li>
                 </ul>
             </div>
@@ -56,32 +55,51 @@
 				<li class="even"><a href="BTChuong2.html">Bài tập chương 2</a></li>
 				<li class="odd"><a href="BTChuong3.html">Bài tập chương 3</a></li>
 				<li class="even"><a href="BTChuong4.html">Bài tập chương 4</a></li>
-				<li class="odd"><a href="#">Bài tập chương 5</a></li>
-				<li class="even"><a href="#">Bài tập chương 6</a></li>
-				<li class="odd"><a href="#">Bài tập chương 7</a></li>
-				<li class="even"><a href="#">Bài tập chương 8</a></li>
-				<li class="odd"><a href="#">Bài tập chương 9</a></li>
+				<li class="odd"><a href="BTChuong5.html">Bài tập chương 5</a></li>
 			</ul>
 
 			
 		</div>
 		<!-- Center-->
 		<div class="center_content">
-		  <div class="box"> Bài Tập Chương 2</div>
-			<ul class="left_menu">
-				<li class="odd"><a href="#">Bài tập 01</a></li>
-				<li class="even"><a href="#">Bài tập 02</a></li>
-				<li class="odd"><a href="bt03.html">Bài tập 03</a></li>
-				<li class="even"><a href="bt04.html">Bài tập 04</a></li>
-				<li class="odd"><a href="bt05.html">Bài tập 05</a></li>
-				<li class="even"><a href="bt06.html">Bài tập 06</a></li>
-				<li class="odd"><a href="bt07.html">Bài tập 07</a></li>
-				<li class="even"><a href="bt08.html">Bài tập 08</a></li>
-				<li class="odd"><a href="bt09.html">Bài tập 09</a></li>
-				<li class="even"><a href="bt10.html">Bài tập 10</a></li>
-				<li class="odd"><a href="bt11.html">Bài tập 11</a></li>
-				<li class="even"><a href="bt12.html">Bài tập 12</a></li>
-			</ul>
+			<div class="chen">
+				<canvas id="canvas" width="400" height="400"></canvas>
+				<script>
+				function draw() {
+					var canvas = document.getElementById('canvas');
+					var ctx = canvas.getContext('2d'); // tạo thiết bị ngữ cảnh
+					// rectangle
+					ctx.fillStyle = "rgb(0,255,255)"; // mau to
+					ctx.fillRect(0, 0, 400, 400); // goi ham to mau
+
+					// Fill circle
+					ctx.beginPath();
+					ctx.arc(200, 200, 200, 0, 2*Math.PI);
+					var grd = ctx.createLinearGradient(0, 0, 0, canvas.height);
+					grd.addColorStop(0,"red");
+					grd.addColorStop(0.5,"white");
+					grd.addColorStop(1,"red");
+					ctx.fillStyle = grd;
+					ctx.fill();
+					ctx.stroke();
+					//polygon
+					ctx.beginPath();
+					ctx.moveTo(200, 0);
+					ctx.lineTo(400, 200);
+					ctx.lineTo(200, 400);
+					ctx.lineTo(0, 200);
+					ctx.lineTo(200, 0);
+					ctx.fillStyle = 'yellow';
+					ctx.fill();
+					ctx.strokeStyle = 'red';
+					ctx.lineWidth = 3;
+					ctx.stroke();
+					ctx.font = "80px Arial";
+					ctx.lineWidth = 5; // độ dày của stroke
+					ctx.strokeStyle = "blue"; // màu stroke
+					ctx.strokeText("HTML5", canvas.width/5, canvas.height/2+20);
+				}
+				</script>
 			</div>
 		</div>
 </body>
