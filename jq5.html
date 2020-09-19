@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+	<link href="images/logo-Title-removebg-preview.png" rel="shortcut icon" />
+	<link rel="stylesheet" type="text/css" href="CSS/top_style.css"/>
+	<link rel="stylesheet" type="text/css" href="CSS/header.css"/>
+	<link rel="stylesheet" type="text/css" href="CSS/menu.css"/>
+	<link rel="stylesheet" type="text/css" href="CSS/left.css"/>
+	<link rel="stylesheet" type="text/css" href="CSS/center.css"/>
+<title> Phạm Chí Năng</title>
+</head>
+	<style>
+				
+	</style>
+	<script>
+		$(document).ready(function(e){
+			$('.myframe').mouseover(function(){
+				$('.myframe').animate({
+					left: '200px',
+					height: '+= 200px',
+					width: '+= 200px'
+				});
+			});
+			$('.myframe').mouseout(function(){
+				$('.myframe').animate({
+					height: '-= 200px',
+					width: '-= 200px'
+				});
+			});
+		});
+		
+		
+	</script>
+
+<body>
+	<div class="main">
+		<div class="top">
+			<img src="http://banners.wunderground.com/banner/gizmotimetemp_both/language/www/global/stations/48900.gif"alt="Du bao thoi tiet - Thanh pho Ho Chi Minh" title="Dự báo thời tiết - Thành phố Hồ Chí Minh" height="41" width="152"/>
+			<div class="right">
+				<img src="images/PhamChiNang__1_-removebg-preview.png" width="165" height="40"/>
+			</div>
+			<div class="right">
+				<img src="images/PhamChiNang-removebg-preview.png" width="165" height="40"/>
+			</div>
+		</div>
+		<div class="header">
+			<div class="logo" align="center"><img src="images/was-removebg-preview.png" width="678" height="162" alt="Ứng dụng Web" title="Ứng dụng web_Cô Mai Trang"/></div>
+			<div class="clr"></div>
+			<div class="clr"></div>
+			<div class="content"></div>
+			<div id="menu_tab">
+                <ul class="menu">
+                	<li><a href="index.html" >Trang Chủ</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#" >Học HTML</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#" >Học CSS</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Học JQuery</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Tài Liệu</a></li>
+                    <li class="divider"></li>
+                    <li><a href="BaiTap.html">Bài Tập</a></li>
+					<li class="divider"></li>
+                    <li><a href="BTBatBuoc.html">Bài Tập bắt buộc</a></li>
+					<li class="divider"></li>
+                </ul>
+            </div>
+		</div>
+		
+		<!-- Left-->
+		<div class="left_content">
+		  <div class="title_box"> Bài Tập</div>
+			<ul class="left_menu">
+				<li class="odd"><a href="BTBatBuoc/BÀI TẬP BẮT BUỘC CHƯƠNG 1.htm">Bài tập chương 1</a></li>
+				<li class="even"><a href="BTBatBuoc/BẢI TẬP BẮT BUỘC CHƯƠNG 2.htm">Bài tập chương 2</a></li>
+				<li class="odd"><a href="#">Bài tập chương 3</a></li>
+				<li class="even"><a href="#">Bài tập chương 4</a></li>
+				<li class="odd"><a href="#">Bài tập chương 5</a></li>
+			</ul>
+
+			
+		</div>
+		<!-- Center-->
+		<div class="center_content">
+			<div class="chen">
+				<div class="cach_left">
+					<div id="myframe">
+					</div>
+					<span style="display: inline-block"> <img class="myframe" src="images/chim1.jpg"</span>
+				</div>
+			</div>
+		</div>
+</body>
+</html>

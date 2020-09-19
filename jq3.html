@@ -11,17 +11,38 @@
 	<link rel="stylesheet" type="text/css" href="CSS/center.css"/>
 <title> Phạm Chí Năng</title>
 </head>
+	<style>
+		table{
+			width: 100%;
+			border-collapse: collapse;
+		}
+		table tr td{
+			width: 30%;
+			border: 1px solid #ff751a;
+			padding: 5px;
+		}
+		table tr th{
+			border: 1px solid #79ff4d;
+			padding: 5px;
+			background-color: sliceblue;
+		}
+		.newBrgd{
+			background-color: #ff0066;
+		}
+		caption{font-size: 1.5cm;
+		font-weight: bold;}
+		
+	</style>
 	<script>
-		$().ready(function(){
-			$("#btTinhngay").click(function(){
-				var t1=$("#dayFrom").val();
-				var t2=$("#dayTo").val();
-				d1 = new Date(t1);
-				d2 = new Date(t2);
-				var songay = (d2.getTime()- d1.getTime())/(3600*24*1000);
-				$("#result").text(songay);
-			})
-		})
+		$(document).ready(function(){
+			$("#change").click(function(){
+				$("tr:odd").addClass("newBrgd");
+			});
+			$("#normal").click(function(){
+				$("tr:odd").removeClass("newBrgd");
+			});
+		});
+		
 	</script>
 
 <body>
@@ -78,20 +99,35 @@
 			<div class="chen">
 				<div class="cach_left">
 					<table>
-						<caption> Tính số ngày giữa 2 thời điểm</caption>
+						<caption>BẢNG GIÁ VẬT TƯ</caption>
 						<tr>
-							<td>Từ ngày</td>
-							<td> <input type="date" id="dayFrom"</td>
+							<th>Tên vạt tư</th>
+							<th>Đơn vị tính</th>
+							<th>Đơn giá</th>
 						</tr>
 						<tr>
-							<td>Đến ngày</td>
-							<td><input type="date" id="dayTo"</td>
+							<td> Cát</td>
+							<td>Khối</td>
+							<td> 77,00</td>
 						</tr>
 						<tr>
-							<td> <button id="btTinhngay">Tính số ngày </button></td>
-							<td><span id="result"></span></td>
+							<td>Đá</td>
+							<td>Khối</td>
+							<td>90,00</td>
+						</tr>
+						<tr>
+							<td>Xi măng Hà Tiên loại 1</td>
+							<td> Bao</td>
+							<td>120,00</td>							
+						</tr>
+						<tr>
+							<td>Xi măng hà tiên loại 2</td>
+							<td> Bao</td>
+							<td>100,00</td>
 						</tr>
 					</table>
+					<button id="change">Đổi màu nền</button>
+					<button id="normal"> Màu nền mặc định</button>
 				</div>
 			</div>
 		</div>
