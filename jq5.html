@@ -15,21 +15,25 @@
 				
 	</style>
 	<script>
-		$(document).ready(function(e){
-			$('.myframe').mouseover(function(){
-				$('.myframe').animate({
-					left: '200px',
-					height: '+= 200px',
-					width: '+= 200px'
-				});
-			});
-			$('.myframe').mouseout(function(){
-				$('.myframe').animate({
-					height: '-= 200px',
-					width: '-= 200px'
-				});
-			});
-		});
+		$(document).ready(function()
+{
+    $(".myframe").mouseover(function()
+    {
+        $(".myframe").animate(
+            {
+                left: "200px",
+                height: "+=200px",
+                width: "+=200px"
+            });
+    });
+    $(".myframe").mouseout(function()
+    {
+        $(".myframe").animate({
+            height: "-=200px",
+            width: "-=200px"
+        });
+    });
+});
 		
 		
 	</script>

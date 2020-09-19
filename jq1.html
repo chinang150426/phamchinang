@@ -12,20 +12,23 @@
 <title> Phạm Chí Năng</title>
 </head>
 	<script>
-		$(document).ready(Function(e)
-			{
-				  $("#btInsert").click(function(){
-						insertList();
-				  	})
-				  $("#txtInput").change(function(e){
-					  	insertList();
-				    });
-		});
-		function insertList(){
-			var str = '<li>' + $("#txtInput").val() + '</li>';
-			$("#header ul").append(str);
-			$("#txtInput").val("");
-		}
+		$().ready(function(e)
+{
+    $("#btInsert").click(function()
+    {
+        insertlist();
+    })
+    $("txtInput").change(function(e)
+    {
+        insertlist();
+    });
+});
+function insertlist ()
+{
+    var str = "<li>" + $("#txtInput").val() + "</li>";
+    $("#header ul").append(str);
+    $("#txtInput").val("");
+}
 	</script>
 
 <body>
@@ -82,14 +85,16 @@
 			<div class="chen">
 				<div class="cach_left">
 					<div id="header">
-						<p> Tên môn học: <input type="text" id="txtInput"/></p>
-						<ul>
-							<li> Python</li>
-							<li> PHP</li>
-						</ul>
-					</div>
-				</div>
-					<input type="button" value="Thêm môn học" id="btInsert"/>
+							<p>
+								Tên môn học:
+								<input type="text" id="txtInput">
+							</p>
+							<ul>
+								<li>Python</li>
+								<li>PHP</li>
+							</ul>
+						</div>
+					<input type="button" value="Thêm môn học" id="btInsert">
 			</div>
 		</div>
 </body>

@@ -12,39 +12,38 @@
 <title> Phạm Chí Năng</title>
 </head>
 	<script>
-$(document).ready(function()
+		$().ready(function(e)
 {
-    $("div1").click(function()
+    $("#btnMoveRight").click(function()
     {
-        var color = $(this).css("background-color");
-        var name;
-        switch(color)
-        {
-            case "rgb(255, 0, 0)": name = "Đỏ"; break;
-            case "rgb(0, 0, 255)": name = "Xanh dương"; break;
-            case "rgb(0, 255, 0)": name = "Xanh lá"; break;
-            case "rgb(255, 0, 255)": name = "Tím"; break;
-        }
-        $("#result").html("Màu xanh bạn chọn là: " + name + ": " + color);
-        $("#result").css({'color': color, 'font-weight' : 'bold'});
+        var left = window.innerWidth - 920;
+        $("#myframe").animate({
+            "left": left
+        }, 1000);
+    });
+    $("#btnMoveLeft").click(function()
+    {
+        $("#myframe").animate({
+            "left": "0"
+        }, 1000);
+    });
+    $("#btnMoveUp").click(function()
+    {
+        $("#myframe").animate({
+            "top": "0"
+        }, 1000);
+    });
+    $("#btnMoveDown").click(function()
+    {
+        var top = window.innerHeight - 502;
+        $("#myframe").animate({
+            "top": top
+        }, 1000);
     });
 });
 	</script>
 	<style>
-		div1
-{
-    width: 60px;
-    height: 60px;
-    margin: 5px;
-    float: left;
-}
-#result
-{
-    clear: left;
-    width: 500px;
-    height: 30px;
-}
-
+	
 	</style>
 
 <body>
@@ -99,15 +98,11 @@ $(document).ready(function()
 		<!-- Center-->
 		<div class="center_content">
 			<div class="chen">
-				<div class="cach_left">
-					<p> Click lên các hình vuông</p>
-					<div1 style="background-color: #0000FF;"></div1>
-					<div1 style="background-color: #FF0000;"></div1>
-					<div1 style="background-color: #FF00FF;"></div1>
-					<div1 style="background-color: #00FF00;"></div1>
-					<br>
-					<div id="result"></div>
-				</div>
+				<div id="myframe"></div>
+				<input type="button" id="btnMoveRight" value="Move Right">
+				<input type="button" id="btnMoveLeft" value="Move Left">
+				<input type="button" id="btnMoveUp" value="Move Up">
+				<input type="button" id="btnMoveDown" value="Move Down">
 			</div>
 		</div>
 </body>
